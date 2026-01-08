@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>User Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-zinc-900 min-h-screen">
+    <a href="/read" class="text-blue-500 text-2xl mt-4 p-6 hover:underline">
+      See All Users
+    </a>
+    <div class="flex items-center mt-140 justify-center text-white">
+      <form
+        action="/create"
+        method="POST"
+        class="bg-zinc-800 p-6 rounded-lg w-96 space-y-4"
+      >
+        <h2 class="text-2xl font-bold text-center">Create User</h2>
+        <!-- Photo -->
+        <input
+          type="text"
+          name="image"
+          placeholder="image url"
+          required
+          class="w-full p-2 rounded text-white"
+        />
+
+        <!-- Name -->
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter name"
+          required
+          class="w-full p-2 rounded text-white"
+        />
+
+        <!-- Email -->
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter email"
+          required
+          class="w-full p-2 rounded text-white"
+        />
+
+        <button class="w-full bg-blue-600 p-2 rounded hover:bg-blue-700">
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

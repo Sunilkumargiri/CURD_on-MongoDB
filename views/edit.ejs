@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Update User</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body
+    class="bg-zinc-900 min-h-screen flex items-center justify-center text-white"
+  >
+    <form
+      action="/update/<%= user._id %>"
+      method="POST"
+      class="bg-zinc-800 p-6 rounded-lg w-96 space-y-4"
+    >
+      <h2 class="text-2xl font-bold text-center">Update User</h2>
+
+      <!-- Image -->
+      <input
+        type="text"
+        name="image"
+        value="<%= user.image %>"
+        class="w-full p-2 rounded text-white"
+      />
+
+      <!-- Name -->
+      <input
+        type="text"
+        name="name"
+        value="<%= user.name %>"
+        class="w-full p-2 rounded text-white"
+      />
+
+      <!-- Email -->
+      <input
+        type="email"
+        name="email"
+        value="<%= user.email %>"
+        class="w-full p-2 rounded text-white"
+      />
+
+      <button class="w-full bg-blue-600 p-2 rounded hover:bg-blue-700">
+        Update
+      </button>
+    </form>
+  </body>
+</html>
